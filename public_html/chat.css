@@ -1,0 +1,412 @@
+.ichat-notguest {
+  display: none;
+}
+.ichat-container {
+  width: 99%;
+  height: 100%;
+  /* border: 1px solid red; */
+  overflow: auto;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  box-sizing: border-box;
+  margin-bottom: 5px;
+  /* display: grid; */
+}
+
+.ichat-room-list {
+  min-height: 30px;
+  max-height: 40px;
+  width: 100%;
+  background-color: #ffebbb; 
+  /* text-align:center; */
+  /* vertical-align:text-bottom; */
+  /* border-left: 1px solid black; */
+
+}
+
+.ichat-message-list {
+  float: left;
+  height: 85%;
+  width: 80%;
+  /* border: 1px solid purple; */
+  padding-top: 10px;
+  padding-left: 10px;
+  /* padding-right: 10px;  */
+  box-sizing: border-box;
+  /* overflow: auto; */
+}
+
+.ichat-user-list {
+  float: right;
+  height: 85%;
+  width: 19%;
+  padding: 1px;
+  border-left: 1px solid black;
+  cursor: pointer;
+  overflow: scroll;
+}
+
+.ichat-user-item-selected {
+  background-color: lightblue;
+  cursor: grabbing !important;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.ichat-user-item i {
+  font-size: 15px;
+  width: 15px;
+}
+.ichat-room-container {
+  /* box-shadow: lightblue 0.5em 1em; */
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding-right: 12px;
+  overflow: auto;
+}
+
+.ichat-text-container {
+  clear: both;
+  width: 80%;
+  height: 10%;
+  /* min-height: 40px; */
+  /* border: 1px solid blue; */
+  box-sizing: border-box;
+
+}
+
+.ichat-input {
+  width: 100%;
+  padding-bottom: 1px;
+  /* background-color: yellow; */
+}
+
+.ichat-roomtab {
+  background-color:silver;
+  height: 100%;
+  box-shadow: silver 0.5em 0.5em silver;
+  border-left: 2px double black;
+  border-right: 2px double black;
+  border-bottom: 1px solid black;
+  border-radius: 5px;
+  margin: 2px;
+  padding: 2px;
+  cursor: grab; 
+
+}
+
+.ichat-roomtab-active {
+  background-color: lightblue;
+  height: 100%;
+  /* box-shadow: lightblue 1em 0.5em 0.5em; */
+  box-shadow: lightblue 0em 0.5em 0.5em;
+  border-top: 1px solid black;
+  /* border-radius: 5px; */
+  /* font-weight: bold; */
+  cursor: default;
+}
+
+
+.ichat-roomtab-newmessage {
+  animation: blink 1s step-start infinite;
+  -webkit-animation: blink 1s step-start 0s infinite;
+}
+
+.ichat-message-status {
+  border: 1px solid gold;
+  background-color: lightgoldenrodyellow;
+  border-radius: 23px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  padding: 5px;
+  /* width: 100%; */
+  text-align: center;
+  font-style: italic;
+  clear: both;
+}
+
+.ichat-message-status-modes {
+  color: navy;
+}
+.ichat-message-status-red {
+  background-color: lightpink; 
+}
+
+.ichat-message-status-wallop {
+  background-color: lightblue;
+  font-style: normal;
+}
+.ichat-modes-list li {
+  list-style-position: inside;
+  list-style-type: none;
+}
+.ichat-message-other {
+  border: 1px solid blue;
+  background-color: lightblue;
+  border-radius: 23px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  padding: 5px;
+  float: left;
+  clear: both;
+}
+
+.ichat-message-mine {
+  border: 1px solid darkgreen;
+  background-color: lightgreen;
+  border-radius: 23px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  padding: 5px;
+  float: right;
+  clear: both;
+}
+.ichat-namedisplay {
+  font-weight: bold;
+  text-decoration: underline dotted black;
+  text-shadow: black;
+}
+
+.ichat-rightclickmenu {
+  background-color: silver;
+  position: absolute;
+  /* border-style:ridge; */
+  /* border-style: solid; */
+  box-shadow: 0.3em 0.3em lightblue;
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  /* padding: 10px; */
+  border: 1px solid black;
+}
+.ichat-rightclickmenu div:hover {
+  background-color: lightblue;
+}
+.ichat-rightclickmenu-header {
+  border-bottom: 1px double black;
+  text-align: center;
+  text-transform: uppercase;
+}
+.ichat-rightclickmenu-header:hover {
+  background-color: silver !important;
+}
+.ichat-rightclickmenu-option {
+  font-size: smaller;
+  padding-top: 3px;
+}
+.ichat-error {
+  position: absolute;
+  background-color: whitesmoke;
+  width: 35%;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 3px 3px darkred, -0.3em -0.3em lightblue;
+}
+.ichat-error-header {
+  border-bottom: 1px solid black;
+  font-weight: lighter;
+  font-size: larger;
+}
+
+.ichat-error-message {
+  padding-top: 15px;
+}
+.ichat-error-dismiss {
+  position:absolute;
+  text-align: right;
+  clear: both;
+  bottom: 0;
+  right: 0;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.ichat-login {
+  /* display: flex; */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  text-align: center;
+}
+
+.ichat-login input {
+  margin: 2px;
+}
+
+.ichat-slowfadeio {
+  animation: fadeio 2s ease-in-out infinite;
+}
+
+@keyframes fadeio {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blink { 
+  50% {
+    opacity: 0.4;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    opacity: 0.0;
+  }
+}
+
+.ichat-modechange {
+  text-shadow: 0.1em 0.1em white;
+}
+.ichat-channel-list-box {
+  width: 100%;
+  /* max-width: 800px; */
+  /* background-color: #23272a; */
+  border: 1px solid #7289da;
+  border-radius: 5px;
+  overflow: hidden;
+  /* display: flex; */
+/* justify-content: center; */
+/* align-items: center; */
+  /* color: white; */
+}
+
+.ichat-channel-list-header {
+  background-color: #7289da;
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.ichat-channel-list-content {
+  max-height: 400px;
+  overflow-y: auto;
+  /* color: white; */
+}
+
+.ichat-channel-list-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ichat-channel-list-table th,
+.ichat-channel-list-table td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #444;
+}
+
+.ichat-channel-list-table th {
+  background-color: silver;
+  font-weight: bold;
+}
+
+.ichat-channel-list-table tr:hover {
+  background-color: lightblue;
+}
+
+
+.dialog {
+  width: 800px;
+  background: #e8e8e8;
+  border: 1px solid #aaa;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  display: none;
+}
+
+.dialog-header {
+  background: #444;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dialog-header .close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.dialog-content {
+  padding: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.checkbox-groups {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.checkbox-group {
+  /* margin-top: 15px; */
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.checkbox-group:not(:last-child) {
+  margin-right: 20px;
+}
+
+.checkbox-group label {
+  display: block;
+  margin-top: 5px;
+}
+
+.dialog-footer {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  background: #d4d4d4;
+  border-top: 1px solid #aaa;
+}
+
+.dialog-footer .btn {
+  padding: 5px 10px;
+  margin-left: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.save-btn {
+  background: #4caf50;
+  color: white;
+}
+
+.cancel-btn {
+  background: #f44336;
+  color: white;
+}
+
+
+
