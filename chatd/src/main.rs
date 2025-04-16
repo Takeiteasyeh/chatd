@@ -10,7 +10,7 @@ use commands::CommandHandler;
 use config::*;
 use auth::*;
 use futures_util::{SinkExt, StreamExt};
-// use rand::Rng;
+use rand::Rng;
 use server::*;
 use client::*;
 use channel::*;
